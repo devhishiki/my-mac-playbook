@@ -1,0 +1,9 @@
+---
+# pip.
+- name: Ensure configured python packages are installed.
+  pip: "name={{ item }}  state=present"
+  with_items: '{{ pip_installed_packages }}'
+
+#- name: Upgrade all python packages (if configured).
+#  pip: update_pip=yes upgrade_all=yes
+#  when: '{{ pip_upgrade_all_packages }}'

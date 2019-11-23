@@ -1,0 +1,158 @@
+---
+downloads: ~/.ansible-downloads/
+
+homebrew_brew_bin_path: /usr/local/bin
+
+homebrew_taps:
+  - caskroom/cask
+  - aspnet/dnx
+  - caskroom/versions
+  - cloudfoundry/tap
+
+homebrew_installed_packages:
+  - ansible
+  - bash-completion
+  - gettext
+  - git
+  - go
+  - gpg
+  - iperf
+  - packer
+  - sqlite
+  - ios-sim
+  - subversion
+  - openssl
+  - node
+  - npm
+  - kubernetes-cli
+  - pandoc
+  - sphinx
+#  - heroku-toolbelt
+  - awscli
+  - mysql
+  - pyenv
+  - pipenv
+  - pyenv-virtualenv
+  - sox
+  - faad2
+  - ffmpeg
+#  - gnu-sed --with-default-names
+  - nodebrew
+  - terraform
+  - git-flow
+  - wget
+#  - sbt
+#  - maven
+  - python3
+  - nkf
+  - graphviz	#PlantUML
+  - jq
+  - mecab
+
+homebrew_upgrade_all_packages: no
+
+homebrew_cask_appdir: /Applications
+homebrew_cask_apps:
+  - bettertouchtool
+  - google-chrome
+#  - handbrake
+  - licecap
+#  - sequel-pro
+  - skype
+#  - skitch
+  - textmate
+  - timemachineeditor
+  - vagrant
+  - vagrant-manager
+  - vlc
+  - iterm2
+  - visual-studio-code
+#  - atom
+  - java
+  - box-sync
+  - google-cloud-sdk
+  - google-hangouts
+#  - googleappengine google-cloud-sdkで足りるため不要
+  - android-studio
+#  - pixate-studio
+  - visual-studio
+  - adobe-creative-cloud
+  - evernote
+#  - p4merge
+  - maczip4win
+  - pycharm
+  - libreoffice
+  - libreoffice-language-pack
+  - slack
+  - docker
+  - wireshark
+  - music-manager
+  - vnc-viewer
+  - cyberduck
+#  - ngrok
+#  - sourcetree
+  - postman
+  - appcleaner
+  - amazon-workspaces
+#  - virtualbox 手動インストール(参考：https://qiita.com/rekaito/items/6e1a7c26af4830ad2a10)
+  - google-drive-file-stream
+  - google-chat
+  - google-web-designer
+  - chromedriver
+  - sketch
+  - craftmanager
+  - tableplus
+  - mysqlworkbench
+  - drawio
+  - brackets
+  - fork
+  - minikube
+
+pip_installed_packages:
+  - virtualenv
+  - virtualenvwrapper
+#  - requests
+#  - selenium
+#  - tweepy
+#  - plotly
+#  - dash
+#  - dash-renderer
+#  - dash-core-components
+#  - dash-html-components
+  - boto3
+
+pip_upgrade_all_packages: yes
+
+atom_packages:
+  - project-manager
+  - recent-projects
+  - minimap
+  - file-icons
+  - atom-beautify
+  - markdown-pdf
+  - autocomplete-python
+  - autocomplete-plus
+  - language-reStructuredText
+  - rst-preview-pandoc
+  - atom-typescript
+  - atom-ternjs
+  - linter
+  - platformio-ide-terminal
+  - open-on-github
+
+gem_installed_packages:
+  - cocoapods
+
+npm_installed_packages:
+  - firebase-tools
+  - typescript
+  - tsd
+  - diff2html-cli
+
+gcloud_installed_packages:
+  - app-engine-python
+  - app-engine-python-extras
+  - datalab
+  - cloud-datastore-emulator
+  - cloud-build-local
+  - pubsub-emulator

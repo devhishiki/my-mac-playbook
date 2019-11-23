@@ -1,0 +1,19 @@
+---
+- hosts: localhost
+  user: hishikiy
+  connection: local
+
+  vars_files:
+    - vars/main.yml
+
+  roles:
+    - homebrew
+    - pip
+#    - dotfiles
+#    - atom-packages
+    - gem
+    - npm
+    - gcloud
+
+  tasks:
+    - include: tasks/ansible-setup.yml

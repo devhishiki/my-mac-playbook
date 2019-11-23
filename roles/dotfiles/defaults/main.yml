@@ -1,0 +1,7 @@
+---
+dotfiles_origin: "${PWD}/files/dotfiles"
+dotfiles_home: "~"
+dotfiles_files:
+  - .bash_profile
+  - .gitconfig
+  - .gitignore

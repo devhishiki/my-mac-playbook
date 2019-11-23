@@ -1,0 +1,6 @@
+---
+# tasks file for atom-packages
+
+- name: Ensure configured atom packages are installed.
+  apm: name={{ item }} state=latest
+  with_items: '{{ atom_packages }}'

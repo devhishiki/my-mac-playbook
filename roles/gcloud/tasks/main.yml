@@ -1,0 +1,5 @@
+---
+# gcloud.
+- name: Ensure configured gcloud components are installed.
+  command: "gcloud components install {{ item }}"
+  with_items: '{{ gcloud_installed_packages }}'
