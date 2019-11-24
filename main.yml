@@ -1,6 +1,7 @@
 ---
 - hosts: localhost
   user: hishikiy
+  gather_facts: no
   connection: local
 
   vars_files:

@@ -2,28 +2,28 @@
 # Tap.
 - name: Ensure configured taps are tapped.
   homebrew_tap: "tap={{ item }} state=present"
-  with_items: '{{ homebrew_taps }}'
+  with_items: "{{ homebrew_taps }}"
 
 # Brew.
 - name: Ensure configured homebrew packages are installed.
-  homebrew: "name={{ item }} state=present"
-  with_items: '{{ homebrew_installed_packages }}'
+  homebrew:
+    name: "{{ item.name }}"
+    state: "{{ item.state | default('present') }}"
+  with_items: "{{ homebrew_installed_packages }}"
 
 - name: Upgrade all homebrew packages (if configured).
   homebrew: update_homebrew=yes upgrade_all=yes
-  when: '{{ homebrew_upgrade_all_packages }}'
+  when: "homebrew_upgrade_all_packages"
 
 # Cask.
 - name: Get list of apps installed with cask.
-  command: >
-    bash -l -c '{{ homebrew_brew_bin_path }}/brew cask list'
+  command: bash -l -c '{{ homebrew_brew_bin_path }}/brew cask list'
   register: homebrew_cask_list
-  always_run: yes
-  changed_when: false
 
 # Use command module instead of homebrew_cask so appdir can be used.
 - name: Install configured cask applications.
-  command: >
-    bash -l -c '{{ homebrew_brew_bin_path }}/brew cask install {{ item }} --appdir={{ homebrew_cask_appdir }}'
-  with_items: '{{ homebrew_cask_apps }}'
-  when: "'{{ item }}' not in homebrew_cask_list.stdout"
+  homebrew_cask:
+    name: "{{ item.name }}"
+    state: "{{ item.state | default('present') }}"
+  with_items: "{{ homebrew_cask_apps }}"
+  when: "item.name not in homebrew_cask_list.stdout"

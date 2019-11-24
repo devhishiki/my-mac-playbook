@@ -4,114 +4,112 @@ downloads: ~/.ansible-downloads/
 homebrew_brew_bin_path: /usr/local/bin
 
 homebrew_taps:
-  - caskroom/cask
   - aspnet/dnx
-  - caskroom/versions
   - cloudfoundry/tap
 
 homebrew_installed_packages:
-  - ansible
-  - bash-completion
-  - gettext
-  - git
-  - go
-  - gpg
-  - iperf
-  - packer
-  - sqlite
-  - ios-sim
-  - subversion
-  - openssl
-  - node
-  - npm
-  - kubernetes-cli
-  - pandoc
-  - sphinx
+  - { name: ansible, state: present }
+  - { name: bash-completion, state: present }
+  - { name: gettext, state: present }
+  - { name: git, state: present }
+  - { name: go, state: present }
+  - { name: gpg, state: present }
+  - { name: iperf, state: present }
+  - { name: packer, state: present }
+  - { name: sqlite, state: present }
+  - { name: ios-sim, state: present }
+  - { name: subversion, state: present }
+  - { name: openssl, state: present }
+  - { name: node, state: present }
+  - { name: npm, state: present }
+  - { name: kubernetes-cli, state: present }
+  - { name: pandoc, state: present }
+  - { name: sphinx, state: present }
 #  - heroku-toolbelt
-  - awscli
-  - mysql
-  - pyenv
-  - pipenv
-  - pyenv-virtualenv
-  - sox
-  - faad2
-  - ffmpeg
+  - { name: awscli, state: present }
+  - { name: mysql, state: present }
+  - { name: pyenv, state: present }
+  - { name: pipenv, state: present }
+  - { name: pyenv-virtualenv, state: present }
+  - { name: sox, state: present }
+  - { name: faad2, state: present }
+  - { name: ffmpeg, state: present }
 #  - gnu-sed --with-default-names
-  - nodebrew
-  - terraform
-  - git-flow
-  - wget
+  - { name: nodebrew, state: present }
+  - { name: terraform, state: present }
+  - { name: git-flow, state: present }
+  - { name: wget, state: present }
 #  - sbt
 #  - maven
-  - python3
-  - nkf
-  - graphviz	#PlantUML
-  - jq
-  - mecab
-  - mecab-ipadic
+  - { name: python3, state: present }
+  - { name: nkf, state: present }
+  - { name: graphviz, state: present }	#PlantUML
+  - { name: jq, state: present }
+  - { name: minikube, state: present }
+  - { name: mecab, state: present }
+  - { name: mecab-ipadic, state: present }
 
 homebrew_upgrade_all_packages: no
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
-  - bettertouchtool
-  - google-chrome
+  - { name: bettertouchtool, state: present }
+  - { name: google-chrome, state: present }
 #  - handbrake
-  - licecap
+  - { name: licecap, state: present }
 #  - sequel-pro
-  - skype
+  - { name: skype, state: present }
 #  - skitch
-  - textmate
-  - timemachineeditor
-  - vagrant
-  - vagrant-manager
-  - vlc
-  - iterm2
-  - visual-studio-code
+  - { name: textmate, state: present }
+  - { name: timemachineeditor, state: present }
+  - { name: vagrant, state: present }
+  - { name: vagrant-manager, state: present }
+  - { name: vlc, state: present }
+  - { name: iterm2, state: present }
+  - { name: visual-studio-code, state: present }
 #  - atom
-  - java
-  - box-sync
-  - google-cloud-sdk
-  - google-hangouts
+  - { name: java, state: present }
+  - { name: box-sync, state: present }
+  - { name: google-cloud-sdk, state: present }
+  - { name: google-hangouts, state: present }
 #  - googleappengine google-cloud-sdkで足りるため不要
-  - android-studio
+  - { name: android-studio, state: present }
 #  - pixate-studio
-  - visual-studio
-  - adobe-creative-cloud
-  - evernote
+  - { name: visual-studio, state: present }
+  - { name: adobe-creative-cloud, state: present }
+  - { name: evernote, state: present }
 #  - p4merge
-  - maczip4win
-  - pycharm
-  - libreoffice
-  - libreoffice-language-pack
-  - slack
-  - docker
-  - wireshark
-  - music-manager
-  - vnc-viewer
-  - cyberduck
+  - { name: maczip4win, state: present }
+  - { name: pycharm, state: present }
+  - { name: libreoffice, state: present }
+  - { name: libreoffice-language-pack, state: present }
+  - { name: slack, state: present }
+  - { name: docker, state: present }
+  - { name: wireshark, state: present }
+  - { name: music-manager, state: present }
+  - { name: vnc-viewer, state: present }
+  - { name: cyberduck, state: present }
 #  - ngrok
 #  - sourcetree
-  - postman
-  - appcleaner
-  - amazon-workspaces
+  - { name: postman, state: present }
+  - { name: appcleaner, state: present }
+  - { name: amazon-workspaces, state: present }
 #  - virtualbox 手動インストール(参考：https://qiita.com/rekaito/items/6e1a7c26af4830ad2a10)
-  - google-drive-file-stream
-  - google-chat
-  - google-web-designer
-  - chromedriver
-  - sketch
-  - craftmanager
-  - tableplus
-  - mysqlworkbench
-  - drawio
-  - brackets
-  - fork
-  - minikube
+  - { name: google-drive-file-stream, state: present }
+  - { name: google-chat, state: present }
+  - { name: google-web-designer, state: present }
+  - { name: chromedriver, state: present }
+  - { name: sketch, state: present }
+  - { name: craftmanager, state: present }
+  - { name: tableplus, state: present }
+  - { name: mysqlworkbench, state: present }
+  - { name: drawio, state: present }
+  - { name: brackets, state: present }
+  - { name: fork, state: present }
 
 pip_installed_packages:
-  - virtualenv
-  - virtualenvwrapper
+  - { name: virtualenv }
+  - { name: virtualenvwrapper }
 #  - requests
 #  - selenium
 #  - tweepy
@@ -120,7 +118,7 @@ pip_installed_packages:
 #  - dash-renderer
 #  - dash-core-components
 #  - dash-html-components
-  - boto3
+  - { name: boto3 }
 
 pip_upgrade_all_packages: yes
 

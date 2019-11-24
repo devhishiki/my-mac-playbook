@@ -20,7 +20,7 @@
     dest: "{{ dotfiles_home }}/{{ item }}"
     mode: 0440
 #    validate: 'visudo -cf %s'
-  sudo: yes
+  become: yes
 #  when: configure_sudoers
 
 #- name: Link dotfiles into home folder.
@@ -28,5 +28,5 @@
 #    src: "{{ dotfiles_origin }}/{{ item }}"
 #    dest: "{{ dotfiles_home }}/{{ item }}"
 #    state: link
-#  sudo: no
+#  become: no
 #  with_items: dotfiles_files

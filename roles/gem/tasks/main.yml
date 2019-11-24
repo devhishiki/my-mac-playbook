@@ -4,5 +4,5 @@
 - name: Ensure configured ruby packages are installed.
 #  gem: "name={{ item }} executable=/usr/local/bin state=latest"
   gem: "name={{ item }} state=latest"
-  sudo: yes
+  become: yes
   with_items: '{{ gem_installed_packages }}'
