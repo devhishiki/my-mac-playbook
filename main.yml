@@ -4,9 +4,15 @@
   gather_facts: no
   connection: local
 
+  # 変数設定
   vars_files:
     - vars/main.yml
 
+  # 事前セットアップ
+  tasks:
+    - include: tasks/ansible-setup.yml
+
+  # インストール
   roles:
     - homebrew
     - pip
@@ -15,6 +21,4 @@
     - gem
     - npm
     - gcloud
-
-  tasks:
-    - include: tasks/ansible-setup.yml
+    - code

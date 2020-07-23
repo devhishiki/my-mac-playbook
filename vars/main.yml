@@ -6,6 +6,7 @@ homebrew_brew_bin_path: /usr/local/bin
 homebrew_taps:
   - aspnet/dnx
   - cloudfoundry/tap
+  - drone/drone
 
 homebrew_installed_packages:
   - { name: ansible, state: present }
@@ -40,14 +41,21 @@ homebrew_installed_packages:
   - { name: git-flow, state: present }
   - { name: wget, state: present }
 #  - sbt
-#  - maven
+  - { name: maven, state: present }
   - { name: python3, state: present }
   - { name: nkf, state: present }
   - { name: graphviz, state: present }	#PlantUML
   - { name: jq, state: present }
   - { name: minikube, state: present }
+  - { name: kubernetes-helm, state: present }
   - { name: mecab, state: present }
   - { name: mecab-ipadic, state: present }
+  - { name: unrar, state: present }
+  - { name: drone, state: present }
+  - { name: git-lfs, state: present }
+  - { name: yarn, state: present }
+  - { name: skaffold, state: present }
+  - { name: https://raw.githubusercontent.com/kadwanev/bigboybrew/master/Library/Formula/sshpass.rb, state: present }
 
 homebrew_upgrade_all_packages: no
 
@@ -58,7 +66,7 @@ homebrew_cask_apps:
 #  - handbrake
   - { name: licecap, state: present }
 #  - sequel-pro
-  - { name: skype, state: present }
+#  - { name: skype, state: present }
 #  - skitch
   - { name: textmate, state: present }
   - { name: timemachineeditor, state: present }
@@ -89,8 +97,7 @@ homebrew_cask_apps:
   - { name: music-manager, state: present }
   - { name: vnc-viewer, state: present }
   - { name: cyberduck, state: present }
-#  - ngrok
-#  - sourcetree
+  - { name: ngrok, state: present }
   - { name: postman, state: present }
   - { name: appcleaner, state: present }
   - { name: amazon-workspaces, state: present }
@@ -106,6 +113,7 @@ homebrew_cask_apps:
   - { name: drawio, state: present }
   - { name: brackets, state: present }
   - { name: fork, state: present }
+  - { name: https://raw.githubusercontent.com/Homebrew/homebrew-cask/6a96e5ea44803e52a43c0c89242390f75d1581ab/Casks/kdiff3.rb, state: present }
 
 pip_installed_packages:
   - { name: virtualenv }
@@ -147,6 +155,8 @@ npm_installed_packages:
   - typescript
   - tsd
   - diff2html-cli
+  - "@google/clasp"
+  - yo
 
 gcloud_installed_packages:
   - app-engine-python
@@ -155,3 +165,40 @@ gcloud_installed_packages:
   - cloud-datastore-emulator
   - cloud-build-local
   - pubsub-emulator
+
+vscode_extensions:
+  # Ansible
+  - vscoss.vscode-ansible
+  - redhat.vscode-yaml
+  # Git
+  - eamodio.gitlens
+  - mhutchie.git-graph
+  - donjayamanne.githistory
+  # Java
+  - vscjava.vscode-java-debug
+  - vscjava.vscode-java-pack
+  - vscjava.vscode-java-test
+  - vscjava.vscode-maven
+  - redhat.java
+  # Container
+  - ms-kubernetes-tools.vscode-kubernetes-tools
+  - googlecloudtools.cloudcode
+  - ms-azuretools.vscode-docker
+  # Python
+  - ms-python.python
+  - njpwerner.autodocstring
+  # Go
+  - golang.go
+  # Docs
+  - docsmsft.docs-markdown
+  - arjun.swagger-viewer
+  - jebbs.plantuml
+  # etc
+  - msjsdiag.debugger-for-chrome
+  - ms-vsliveshare.vsliveshare
+  - ms-vscode-remote.remote-ssh
+  - ms-vscode-remote.remote-ssh-edit
+  - humao.rest-client
+  - ms-python.vscode-pylance
+  - vscjava.vscode-java-pack
+

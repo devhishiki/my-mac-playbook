@@ -1,0 +1,7 @@
+---
+# tasks file for vscode extension
+
+- name: install vscode extension
+  shell: code --install-extension {{ item }}
+  become: yes
+  with_items: "{{ vscode_extensions }}"
