@@ -44,15 +44,15 @@ homebrew_installed_packages:
 #  - sbt
 #  - { name: maven, state: present }
   - { name: python3, state: present }
-#  - { name: nkf, state: present }
+  - { name: nkf, state: present }
   - { name: graphviz, state: present }	#PlantUML
   - { name: jq, state: present }
 #  - { name: minikube, state: present }
   - { name: kubernetes-helm, state: present }
 #  - { name: mecab, state: present }
 #  - { name: mecab-ipadic, state: present }
-  - { name: unrar, state: present }
-  - { name: drone, state: present }
+#  - { name: unrar, state: present }
+#  - { name: drone, state: present }
   - { name: git-lfs, state: present }
   - { name: yarn, state: present }
   - { name: skaffold, state: present }
