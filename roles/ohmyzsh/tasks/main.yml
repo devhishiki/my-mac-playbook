@@ -1,0 +1,18 @@
+---
+# tasks file for oh-my-zsh
+
+- name: Check if .oh-my-zsh exists
+  stat:
+    path: "{{ lookup('env', 'HOME') }}/.oh-my-zsh"
+  register: stat_oh_my_zsh_result
+
+- name: Cloning  oh-my-zsh
+  git:
+    repo=https://github.com/robbyrussell/oh-my-zsh
+    dest="{{ lookup('env', 'HOME') }}/.oh-my-zsh"
+  when: not stat_oh_my_zsh_result.stat.exists
+
+- name: Copy zsh-theme 
+  copy:
+    src: "{{ lookup('env', 'PWD') }}/{{ zsh_theme_origin }}/agnoster.zsh-theme"
+    dest: "{{ lookup('env', 'HOME') }}/.oh-my-zsh/themes/agnoster.zsh-theme"

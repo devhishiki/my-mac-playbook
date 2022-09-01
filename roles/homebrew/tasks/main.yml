@@ -17,13 +17,14 @@
 
 # Cask.
 - name: Get list of apps installed with cask.
-  command: bash -l -c '{{ homebrew_brew_bin_path }}/brew cask list'
+  command: bash -l -c '{{ homebrew_brew_bin_path }}/brew list --cask'
   register: homebrew_cask_list
 
 # Use command module instead of homebrew_cask so appdir can be used.
 - name: Install configured cask applications.
-  homebrew_cask:
+  community.general.homebrew_cask:
     name: "{{ item.name }}"
     state: "{{ item.state | default('present') }}"
+    install_options: 'appdir=/Applications'
   with_items: "{{ homebrew_cask_apps }}"
   when: "item.name not in homebrew_cask_list.stdout"

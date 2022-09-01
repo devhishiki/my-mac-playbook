@@ -1,0 +1,19 @@
+---
+
+- name: download powerline-fonts repository from github
+  git:
+    repo: "https://github.com/powerline/fonts.git"
+    dest: "{{ lookup('env', 'PWD') }}/tmp"
+
+- name: copy fonts
+  copy:
+    src: "{{item}}"
+    dest: "{{ lookup('env', 'HOME') }}/Library/Fonts"
+  with_fileglob:
+    - "{{ lookup('env', 'PWD') }}/tmp/RobotoMono/*.ttf"
+    - "{{ lookup('env', 'PWD') }}/tmp/SourceCodePro/*.otf"
+
+- name: remove download directory
+  ansible.builtin.file:
+    path: "{{ lookup('env', 'PWD') }}/tmp"
+    state: absent

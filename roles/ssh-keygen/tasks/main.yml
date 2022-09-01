@@ -1,0 +1,22 @@
+---
+
+- name: Generate an OpenSSH keypair
+  openssh_keypair:
+    path: "{{ lookup('env', 'HOME') }}/.ssh/{{ item }}_rsa"
+  with_items:
+    - github
+    - bitbucket
+    - bitbucket_wosco
+    - gitlab
+    - gitlab_wosco
+
+- name: Check if ssh config
+  stat:
+    path: "{{ lookup('env', 'HOME') }}/.ssh/config"
+  register: stat_ssh_config_result
+  
+- name: Copy config if not exist
+  copy:
+    src: "{{ lookup('env', 'PWD') }}/{{ ssh_origin }}/config"
+    dest: "{{ lookup('env', 'HOME') }}/.ssh/config"
+  when: not stat_ssh_config_result.stat.exists

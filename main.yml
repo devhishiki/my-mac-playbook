@@ -1,6 +1,5 @@
 ---
 - hosts: localhost
-  user: hishikiy
   gather_facts: no
   connection: local
 
@@ -8,15 +7,14 @@
   vars_files:
     - vars/main.yml
 
-  # 事前セットアップ
-  tasks:
-    - include: tasks/ansible-setup.yml
-
   # インストール
   roles:
     - homebrew
     - pip
-#    - dotfiles
+    - ohmyzsh
+    - powerline-fonts
+    - dotfiles
+    - ssh-keygen
 #    - atom-packages
 #    - gem
     - npm
