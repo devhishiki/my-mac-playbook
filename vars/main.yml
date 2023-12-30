@@ -98,6 +98,10 @@ homebrew_installed_packages:
   - { name: docker-credential-helper, state: present }
   - { name: mongosh, state: present }
   - { name: snyk, state: present }
+  - { name: colordiff, state: present }
+  - { name: podman, state: present }
+  - { name: gh, state: present }
+  - { name: terraformer, state: present }
 
 homebrew_upgrade_all_packages: no
 
@@ -161,6 +165,9 @@ homebrew_cask_apps:
   - { name: microsoft-teams, state: present }
   - { name: docker-toolbox, state: present }
   - { name: brave-browser, state: present }
+  - { name: discord, state: present }
+  - { name: alfred, state: present }
+  - { name: notion, state: present }
 
 pip_installed_packages:
   - { name: virtualenv }
@@ -215,6 +222,8 @@ npm_installed_packages:
   - npm-check-updates
   - node-gyp
   - prettier
+  - "@quasar/cli@latest"
+  - "@aws-amplify/cli"
 
 gcloud_installed_packages:
   - app-engine-python

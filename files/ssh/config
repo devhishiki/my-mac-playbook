@@ -15,16 +15,3 @@ Host gitlab.com
   IdentityFile ~/.ssh/gitlab_rsa
   TCPKeepAlive yes
   IdentitiesOnly yes
-Host bitbucket.org (wosco)
-  User git
-  Port 22
-  HostName bitbucket.org
-  IdentityFile ~/.ssh/bitbucket_wosco_rsa
-  TCPKeepAlive yes
-  IdentitiesOnly yes
-Host gitlab.com (wosco)
-  User git
-  HostName gitlab.com
-  IdentityFile ~/.ssh/gitlab_wosco_rsa
-  TCPKeepAlive yes
-  IdentitiesOnly yes
