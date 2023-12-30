@@ -34,9 +34,6 @@ homebrew_installed_packages:
 #  - { name: ios-sim, state: present }
 #  - { name: subversion, state: present }
   - { name: openssl, state: present }
-  - { name: node, state: present }
-  - { name: npm, state: present }
-  - { name: kubernetes-cli, state: present }
   - { name: pandoc, state: present }
   - { name: sphinx, state: present }
 #  - heroku-toolbelt
@@ -55,11 +52,9 @@ homebrew_installed_packages:
   - { name: wget, state: present }
 #  - sbt
 #  - { name: maven, state: present }
-  - { name: python3, state: present }
   - { name: nkf, state: present }
   - { name: graphviz, state: present }	#PlantUML
   - { name: jq, state: present }
-  - { name: minikube, state: present }
   - { name: kubernetes-helm, state: present }
 #  - { name: mecab, state: present }
 #  - { name: mecab-ipadic, state: present }
@@ -68,7 +63,6 @@ homebrew_installed_packages:
   - { name: yarn, state: present }
   - { name: skaffold, state: present }
   - { name: hudochenkov/sshpass/sshpass, state: present }
-  - { name: pipenv, state: present }
   - { name: gnu-cobol, state: present }
   - { name: jfrog-cli, state: present }
   - { name: buildpacks/tap/pack, state: present }
@@ -102,6 +96,8 @@ homebrew_installed_packages:
   - { name: podman, state: present }
   - { name: gh, state: present }
   - { name: terraformer, state: present }
+  - { name: zsh-autosuggestions, state: present }
+  - { name: zsh-completions, state: present }
 
 homebrew_upgrade_all_packages: no
 
@@ -228,10 +224,10 @@ npm_installed_packages:
 gcloud_installed_packages:
   - app-engine-python
   - app-engine-python-extras
-  - datalab
-  - cloud-datastore-emulator
   - cloud-build-local
   - pubsub-emulator
+  - minikube
+  - kubectl
 
 vscode_extensions:
   # Ansible
