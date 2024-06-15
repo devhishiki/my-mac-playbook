@@ -11,7 +11,7 @@ zsh_theme_origin: "files/zsh-theme"
 
 ssh_origin: "files/ssh"
 
-homebrew_brew_bin_path: /usr/local/bin
+homebrew_brew_bin_path: /opt/homebrew/bin
 
 homebrew_taps:
   - aspnet/dnx
@@ -35,7 +35,7 @@ homebrew_installed_packages:
 #  - { name: subversion, state: present }
   - { name: openssl, state: present }
   - { name: pandoc, state: present }
-  - { name: sphinx, state: present }
+#  - { name: sphinx, state: present }
 #  - heroku-toolbelt
   - { name: awscli, state: present }
 #  - { name: mysql, state: present }
@@ -55,18 +55,18 @@ homebrew_installed_packages:
   - { name: nkf, state: present }
   - { name: graphviz, state: present }	#PlantUML
   - { name: jq, state: present }
-  - { name: kubernetes-helm, state: present }
+#  - { name: kubernetes-helm, state: present }
 #  - { name: mecab, state: present }
 #  - { name: mecab-ipadic, state: present }
 #  - { name: drone, state: present }
   - { name: git-lfs, state: present }
   - { name: yarn, state: present }
   - { name: skaffold, state: present }
-  - { name: hudochenkov/sshpass/sshpass, state: present }
-  - { name: gnu-cobol, state: present }
+#  - { name: hudochenkov/sshpass/sshpass, state: present }
+#  - { name: gnu-cobol, state: present }
   - { name: jfrog-cli, state: present }
-  - { name: buildpacks/tap/pack, state: present }
-  - { name: cocoapods, state: present }
+#  - { name: buildpacks/tap/pack, state: present }
+#  - { name: cocoapods, state: present }
   - { name: protobuf, state: present }
   - { name: protoc-gen-grpc-web, state: present }
 #  - { name: unity-hub, state: present }
@@ -75,7 +75,7 @@ homebrew_installed_packages:
   - { name: rbenv, state: present }
   - { name: ruby-build, state: present }
   - { name: argocd, state: present }
-  - { name: hyperkit, state: present }
+#  - { name: hyperkit, state: present }
   - { name: poetry, state: present }
   - { name: cfn-lint, state: present }
   - { name: aws-sam-cli, state: present }
@@ -93,7 +93,7 @@ homebrew_installed_packages:
   - { name: mongosh, state: present }
   - { name: snyk, state: present }
   - { name: colordiff, state: present }
-  - { name: podman, state: present }
+#   - { name: podman, state: present }
   - { name: gh, state: present }
   - { name: terraformer, state: present }
   - { name: zsh-autosuggestions, state: present }
@@ -112,8 +112,8 @@ homebrew_cask_apps:
 #  - skitch
   - { name: textmate, state: present }
 #  - { name: timemachineeditor, state: present }
-  - { name: vagrant, state: present }
-  - { name: vagrant-manager, state: present }
+#  - { name: vagrant, state: present }
+#  - { name: vagrant-manager, state: present }
 #  - { name: vlc, state: present }
   - { name: iterm2, state: present }
   - { name: visual-studio-code, state: present }
@@ -138,11 +138,11 @@ homebrew_cask_apps:
   - { name: ngrok, state: present }
   - { name: postman, state: present }
   - { name: appcleaner, state: present }
-  - { name: amazon-workspaces, state: present }
+#  - { name: amazon-workspaces, state: present }
 #  - virtualbox 手動インストール(参考：https://qiita.com/rekaito/items/6e1a7c26af4830ad2a10)
-  - { name: google-drive-file-stream, state: present }
+#  - { name: google-drive-file-stream, state: present }
 #  - { name: google-chat, state: present }
-  - { name: google-web-designer, state: present }
+#  - { name: google-web-designer, state: present }
   - { name: chromedriver, state: present }
 #  - { name: sketch, state: present }
 #  - { name: craftmanager, state: present }
@@ -159,11 +159,14 @@ homebrew_cask_apps:
   - { name: shiftit, state: present }
   - { name: zoom, state: present }
   - { name: microsoft-teams, state: present }
-  - { name: docker-toolbox, state: present }
+#  - { name: docker-toolbox, state: present }
   - { name: brave-browser, state: present }
   - { name: discord, state: present }
   - { name: alfred, state: present }
   - { name: notion, state: present }
+  - { name: github, state: present }
+  - { name: cursor, state: present }
+  - { name: docker, state: present }
 
 pip_installed_packages:
   - { name: virtualenv }
@@ -213,13 +216,14 @@ npm_installed_packages:
   - json-schema-to-typescript
   - aws-cdk
   - "@google-cloud/functions-framework"
-  - snyk
+#  - snyk
   - renovate
   - npm-check-updates
   - node-gyp
   - prettier
   - "@quasar/cli@latest"
   - "@aws-amplify/cli"
+  - "@githubnext/github-copilot-cli"
 
 gcloud_installed_packages:
   - app-engine-python

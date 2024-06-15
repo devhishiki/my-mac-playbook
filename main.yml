@@ -14,7 +14,7 @@
     - ohmyzsh
     - powerline-fonts
     - dotfiles
-    - ssh-keygen
+#    - ssh-keygen
 #    - atom-packages
 #    - gem
     - npm
