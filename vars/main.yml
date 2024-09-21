@@ -98,6 +98,8 @@ homebrew_installed_packages:
   - { name: terraformer, state: present }
   - { name: zsh-autosuggestions, state: present }
   - { name: zsh-completions, state: present }
+  - { name: azure-cli, state: present }
+  - { name: act, state: present }
 
 homebrew_upgrade_all_packages: no
 
@@ -167,6 +169,7 @@ homebrew_cask_apps:
   - { name: github, state: present }
   - { name: cursor, state: present }
   - { name: docker, state: present }
+  - { name: microsoft-edge, state: presente }
 
 pip_installed_packages:
   - { name: virtualenv }
